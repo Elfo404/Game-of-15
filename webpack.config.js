@@ -51,7 +51,7 @@ module.exports = function makeWebpackConfig() {
 
 		// Output path from the view of the page
 		// Uses webpack-dev-server in development
-		publicPath: isProd ? '/Game-of-15/' : 'http://localhost:8080/Game-of-15/',
+		publicPath: isProd ? '/Game-of-15/' : 'http://localhost:8080/',
 
 		// Filename for entry points
 		// Only adds hash in build mode
@@ -165,7 +165,8 @@ module.exports = function makeWebpackConfig() {
 		config.plugins.push(
 			new HtmlWebpackPlugin({
 				template: './src/public/index.html',
-				inject: 'body'
+				inject: 'body',
+				publicPath: '/Game-of-15/'
 			}),
 
 			// Reference: https://github.com/webpack/extract-text-webpack-plugin

@@ -1,0 +1,128 @@
+body {
+    background-color: #f6f6f6;
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+}
+
+body.win {
+    animation-name: win;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.container {
+    margin: 0 auto;
+    width: 600px;
+    text-align: center;
+    text-shadow: -1px -1px 0 #fff,
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+    1px 1px 0 #fff;
+}
+
+#gameContainer {
+    position: relative;
+    height: 400px;
+    width: 400px;
+    margin: 10px auto;
+}
+
+#gameContainer .square {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    font-size: 22pt;
+    color: rgba(0, 0, 0, 0.8);
+    font-weight: bold;
+    text-shadow: -1px -1px 0 #fff,
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+    1px 1px 0 #fff;
+    text-align: center;
+    line-height: 90px;
+    transition-property: top, left;
+    transition-duration: 0.6s;
+    box-sizing: border-box;
+    cursor: pointer;
+    box-shadow: 0 0 2px #999;
+
+}
+
+#gameControls button {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    height: 2em;
+    font-size: 1.5em;
+    border-radius: 3px;
+    color: #fafafa;
+    background: #2a81d7;
+    border: 1px solid #165899;
+    border-top-color: #2a73a6;
+    border-bottom-color: #07428f;
+    box-shadow: inset 0 1px 0 0 #62b1e9, 0 0 4px #999;
+    cursor: pointer;
+    text-shadow: 0 -1px 1px #1d62ab;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#gameControls button:hover {
+    box-shadow: inset 0 0 6px 2px #1657b5, 0 1px 0 0 #fff;
+}
+
+#gameControls button:active {
+    background: #3172c1;
+    border: 1px solid #154c8c;
+    border-bottom: 1px solid #0e408e;
+    box-shadow: inset 0 0 6px 3px #1657b5, 0 1px 0 0 #fff;
+    text-shadow: 0 -1px 1px #2361a4;
+}
+
+button::-moz-focus-inner {
+    border: 0;
+}
+
+.modal-bg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    border: 1px solid #000;
+    border-radius: 3px;
+    background-color: #eee;
+    box-shadow: 0 0 3px #333;
+    position: absolute;
+    top: 28%;
+    height: 46%;
+    width: 86%;
+    left: 7%;
+    text-align: center;
+    font-size: 1.6em;
+}
+
+@keyframes win {
+    0% {
+        background-color: red;
+    }
+    20% {
+        background-color: blue;
+    }
+    40% {
+        background-color: yellow;
+    }
+    60% {
+        background-color: purple;
+    }
+    80% {
+        background-color: green;
+    }
+    100% {
+        background-color: red;
+    }
+}

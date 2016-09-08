@@ -34,7 +34,7 @@ export default class GameBox {
     }
 
     shuffle() {
-        for (let i = 0; i < 800; i++) {
+        for (let i = 0; i < 1000; i++) {
             let choices = this.squares.filter(function (s) {
                 return this.canMove(s);
             }.bind(this));
@@ -77,7 +77,7 @@ export default class GameBox {
         var prevY = -1;
         let prevX = -1;
         for (let square of this.squares) {
-            if (square.X < prevX || (square.Y < prevY && prevY != this.gridSize - 1) || (square.X == square.Y && square.Y == this.gridSize - 1)) {
+            if (square.Y < prevY || (square.X < prevX && prevX != this.gridSize - 1) || (square.X == square.Y && square.Y == this.gridSize - 1)) {
                 return false
             }
             prevX = square.X;

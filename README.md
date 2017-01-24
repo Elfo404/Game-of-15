@@ -1,4 +1,4 @@
-# Game Of 15
+# Game Of 15 - [![Code Climate](https://codeclimate.com/github/Elfo404/Game-of-15/badges/gpa.svg)](https://codeclimate.com/github/Elfo404/Game-of-15)
 
 A simple ~~ES6~~ ES2015 [15-Puzzle](https://en.wikipedia.org/wiki/15_puzzle) game implementation with a nice winning screen.
 
